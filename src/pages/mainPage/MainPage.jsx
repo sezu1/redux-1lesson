@@ -7,15 +7,14 @@ function MainPage() {
 
     const {counter} = useSelector(store => store);
 
-    const plus = counter + 1;
-    const minus = counter - 1;
 
-    function changeCounterPlus(){
-        dispatch({type: 'CHANGE_COUNTER', payload: plus});
+
+    function changeCounterPlus(incerement){
+        dispatch({type: 'CHANGE_COUNTER_PLUS', payload: incerement });
     }
 
-    function changeCounterMinus(){
-        dispatch({type: 'CHANGE_COUNTER', payload: minus});
+    function changeCounterMinus(discrement){
+        dispatch({type: 'CHANGE_COUNTER_MINUS', payload: discrement});
     }
 
 
